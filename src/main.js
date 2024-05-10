@@ -1,10 +1,12 @@
-import './assets/my.css'
+import "./assets/vendor.css";
+import "./assets/my.css";
+import Swiper from "swiper";
+import {Pagination} from "swiper/modules";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
-createApp(App).mount('#app')
-
+createApp(App).mount("#app");
 
 var divVisible = false;
 
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let swiper = new Swiper(".mySwiper", {
+  modules:[Pagination],
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
